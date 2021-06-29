@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>Desafio Luiza Labs - Login</title>
+
+  <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/css.css" rel="stylesheet">
+
+</head>
+<body id="bLogin" class="text-center" >
+
+  <main class="form-signin">
+    <form id="formLogin" method="POST">
+      <img class="mb-4" src="assets/img/logo.jpg" alt="logo" width="100" height="100">
+      <h1 class="h3 mb-3 fw-normal">Entrar no Sistema</h1>
+     
+      <div class="form-floating">
+        <input type="email" class="form-control" id="loginEmail" placeholder="nome@email.com" required="">
+        <label for="loginEmail"><i class="bi bi-envelope-fill"></i> Email</label>
+      </div>
+
+      <div class="form-floating">
+        <input type="password" class="form-control" id="loginPass" placeholder="Senha" required="">
+        <label for="loginPass"><i class="bi bi-key-fill"></i> Senha</label>
+      </div>
+      <div class="row" style="--bs-gutter-x: 0.5rem;">
+        <div class="col-6">
+          <button type="button" class="w-100 btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#register">Não Possui Conta?</button>
+        </div>
+        <div class="col-6">
+          <button type="button" class="w-100 btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#recoverPass">Esqueceu a senha?</button>
+        </div>
+      </div>
+      
+      <button class="w-100 btn btn-lg btn-primary mt-2" id="btnLogin" type="button">Entrar</button>
+    </form>
+  </main>
+
+  <div class="modal fade" id="register" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center">Cadastrar</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formRegisterUser" method="POST">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="registerName" placeholder="Nome Completo" required="">
+              <label for="registerName"><i class="bi bi-person-fill"></i> Nome Completo</label>
+            </div>
+            <div class="form-floating mt-1">
+              <input type="email" class="form-control" id="registerEmail" placeholder="nome@email.com" required="">
+              <label for="registerEmail"><i class="bi bi-envelope-fill"></i> Email</label>
+            </div>
+            <div class="form-floating mt-1">
+              <input type="password" class="form-control" id="registerPass" placeholder="Senha" required="">
+              <label for="registerPass"><i class="bi bi-key-fill"></i> Senha</label>
+            </div>
+            <div class="form-floating mt-1">
+              <input type="password" class="form-control" id="registerRepeatPass" placeholder="Confirmar Senha" required="">
+              <label for="registerPass"><i class="bi bi-key-fill"></i> Confirmar Senha</label>
+            </div>
+            <button class="btn btn-primary mt-2" id="btnRegister" type="button">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="recoverPass" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center">Recuperar Senha</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formRecoverPass">
+            <div class="form-floating">
+              <input type="email" class="form-control" id="recoverEmail" placeholder="nome@email.com" required="">
+              <label for="recoverEmail"><i class="bi bi-envelope-fill"></i> Email</label>
+            </div>
+            <button class="btn btn-primary mt-2" id="btnRecover" type="button">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/init.js"></script>
+</body>
+</html>
